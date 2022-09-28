@@ -1,4 +1,11 @@
-import { StyleSheet, Text, View, SafeAreaView, ScrollView } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+} from "react-native";
 import React from "react";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
@@ -10,7 +17,7 @@ import {
   ElMessiri_600SemiBold,
   ElMessiri_700Bold,
 } from "@expo-google-fonts/el-messiri";
-
+import { Button, Icon } from "@rneui/themed";
 const Home = () => {
   let [fontloaded] = useFonts({
     AlfaSlabOne_400Regular: AlfaSlabOne_400Regular,
@@ -25,40 +32,42 @@ const Home = () => {
   }
   return (
     <SafeAreaView style={styles.Main}>
+      <StatusBar style="light" />
       <ScrollView>
         <View style={styles.header}>
-            <Text style={styles.headerText}>Mensa App</Text>
-          </View>
-          <View style={styles.body}>
-            <Text style={styles.bodyText}>
-              An app made by one student for all students
-            </Text>
-            <Text style={styles.bodyText}>Emojis meaning:</Text>
-            <Text style={styles.bodyTextIcons}>
-              🐷 : <Text style={styles.bodyText}>Schwein / Pig</Text>
-            </Text>
-            <Text style={styles.bodyTextIcons}>
-              🌱 : <Text style={styles.bodyText}>Vegan</Text>
-            </Text>
-            <Text style={styles.bodyTextIcons}>
-              🥗 : <Text style={styles.bodyText}>Vegetarisch / Vegetarian</Text>
-            </Text>
-            <Text style={styles.bodyTextIcons}>
-              🐮 : <Text style={styles.bodyText}>Rind / Beef</Text>
-            </Text>
-            <Text style={styles.bodyTextIcons}>
-              🐟 : <Text style={styles.bodyText}>Fisch / Fish</Text>
-            </Text>
-            <Text style={styles.bodyTextIcons}>
-              🐑 : <Text style={styles.bodyText}>Lamm / Lamb</Text>{" "}
-            </Text>
-            <Text style={styles.bodyTextIcons}>
-              🐔 : <Text style={styles.bodyText}>Hähnchen / Chicken</Text>{" "}
-            </Text>
-            <Text style={styles.bodyTextIcons}>
-              🤷 : <Text style={styles.bodyText}>Unbekannt / Unknown</Text>{" "}
-            </Text>
-          </View>
+          <Text style={styles.headerText}>Mensa App</Text>
+        </View>
+        <View style={styles.body}>
+          <Text style={styles.bodyText}>
+            An app made by one student for all students
+          </Text>
+          <Text style={styles.bodyText}>Emojis meaning:</Text>
+          <Text style={styles.bodyTextIcons}>
+            🐷 : <Text style={styles.bodyText}>Schwein / Pig</Text>
+          </Text>
+          <Text style={styles.bodyTextIcons}>
+            🌱 : <Text style={styles.bodyText}>Vegan</Text>
+          </Text>
+          <Text style={styles.bodyTextIcons}>
+            🥗 : <Text style={styles.bodyText}>Vegetarisch / Vegetarian</Text>
+          </Text>
+          <Text style={styles.bodyTextIcons}>
+            🐮 : <Text style={styles.bodyText}>Rind / Beef</Text>
+          </Text>
+          <Text style={styles.bodyTextIcons}>
+            🐟 : <Text style={styles.bodyText}>Fisch / Fish</Text>
+          </Text>
+          <Text style={styles.bodyTextIcons}>
+            🐑 : <Text style={styles.bodyText}>Lamm / Lamb</Text>{" "}
+          </Text>
+          <Text style={styles.bodyTextIcons}>
+            🐔 : <Text style={styles.bodyText}>Hähnchen / Chicken</Text>{" "}
+          </Text>
+          <Text style={styles.bodyTextIcons}>
+            🤷 : <Text style={styles.bodyText}>Unbekannt / Unknown</Text>{" "}
+          </Text>
+        </View>
+    
       </ScrollView>
     </SafeAreaView>
   );
@@ -69,7 +78,7 @@ const styles = StyleSheet.create({
   Main: {
     display: "flex",
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: "#121212",
   },
   header: {
     alignSelf: "stretch",
@@ -77,11 +86,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderBottomWidth: 5,
-    borderBottomColor: "black",
+    borderBottomColor: "white",
   },
   headerText: {
     fontSize: 22,
     fontFamily: "AlfaSlabOne_400Regular",
+    color: "white",
   },
   body: {
     marginTop: 40,
@@ -92,9 +102,11 @@ const styles = StyleSheet.create({
     fontFamily: "ElMessiri_600SemiBold",
     fontSize: 20,
     marginBottom: 20,
+    color: "white",
   },
   bodyTextIcons: {
     paddingLeft: 20,
     fontSize: 30,
+    color: "white",
   },
 });
