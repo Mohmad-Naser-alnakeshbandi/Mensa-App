@@ -1,6 +1,6 @@
 # Mensa App
 
-### The Mensa app uses web scraping technology to get all the necessary information for the Mensa websites.
+### The Mensa app uses web scraping technology to get all the necessary information from the Mensa websites.
 
 ### Information like:
 
